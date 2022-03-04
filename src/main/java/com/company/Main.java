@@ -9,10 +9,5 @@ public class Main {
             System.out.println("A = " + a);
             a = a-1;
         }
-        HA chel = new HA();
-        chel.d =14;
-        System.out.println(chel.d);
-        chel.asd();
-
     }
 }
