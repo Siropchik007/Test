@@ -1,12 +1,14 @@
 //import jdk.jfr.ContentType;
-import org.junit.jupiter.api.Test;
+
 import io.restassured.http.ContentType;
+import org.junit.jupiter.api.Test;
 import pojos.JsonUsers;
-import com.fasterxml.jackson.core.base.GeneratorBase;
 
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
+import static org.assertj.core.api.Assertions.assertThat;
+
 
 public class RestTest {
 
@@ -22,6 +24,7 @@ public class RestTest {
                 .extract().jsonPath().getList("data", JsonUsers.class);
                 //.body("data.find{it.email=='george.bluth@reqres.in'}.first_name", equalTo("George"));
 
+        assertThat(users).extracting(JsonUsers::getFirst_name).contains("George");
 
     }
 }

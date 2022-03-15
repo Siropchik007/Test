@@ -1,9 +1,12 @@
 package pojos;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Data;
+
 
 
 @JsonIgnoreProperties(ignoreUnknown = true)
+
 public class JsonUsers {
     public int getId() {
         return id;
@@ -22,5 +25,6 @@ public class JsonUsers {
     }
 
     private int id;
+
     private String first_name;
 }
