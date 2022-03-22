@@ -5,10 +5,13 @@ import lombok.Data;
 
 @Data
 public class UserPojoFull{
-	@JsonProperty("id")
 	private int id;
-	@JsonProperty("fist_name")
-	private String firstName;
+	private String avatar;
+	@JsonProperty("first_name")
+	private int firstName;
+	@JsonProperty("last_name")
+	private String lastName;
+	private String email;
 
 
 }

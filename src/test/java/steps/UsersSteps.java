@@ -50,7 +50,7 @@ public class UsersSteps {
     }
 
     //такой же, но статичный метод, надо передавать парметром id пользователя, которого мы хотим получить
-    public  static UserPojoFull getUser(int id){
+    /*public  static UserPojoFull getUser(int id){
         return  given().get("/" + id).as(UserPojoFull.class);
-    }
+    }*/
 }
